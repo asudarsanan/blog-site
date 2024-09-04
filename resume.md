@@ -6,7 +6,7 @@ title: Resume
 
 **SENIOR SOFTWARE ENGINEER (6 years)**
 
-- LinkedIn: [linkedin.com/in/asudarsanan](https://linkedin.com/in/asudarsanan)
+- LinkedIn: [linkedin.com/in/asudarsanan](https://www.linkedin.com/in/aasishsudarsanan/)
 - GitHub: [github.com/asudarsanan](https://github.com/asudarsanan)
 
 ---

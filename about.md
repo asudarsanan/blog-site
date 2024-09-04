@@ -3,6 +3,12 @@ layout: page
 title: About
 ---
 
-This is an example page!
+## Hi Namaste!
 
-It's very similar to a `post` layout, with the only difference that the publish date is not shown!
+Quick intro: I'm Aasish, also known as `asudarsanan` on most of the internet. I'm a Software Engineer who enjoys building cool things and is learning to become better at creating useful things. 
+
+I mostly work on the platform side of the spectrum, building developer tools, managing system states, running Kubernetes (k8s), ECS, and various other tech stuff that keeps your pods up and running while you sleep peacefully.
+
+Stick around if you find anything interesting here!
+
+\ Aasish
