@@ -5,12 +5,33 @@ entries:
   - title: About me
     url: about
 
+
   - title: Blogs
     post_list:
-      limit: 5
+      category: blogs
+      limit: 15
       show_more: true
-      show_more_text: show more...
+      show_more_text: more
       show_more_url: archive.html
+
+  - title: Thoughts
+    post_list:
+      limit: 5
+      category: thoughts
+      show_more: true
+      show_more_text: more
+      show_more_url: archive.html
+
+  - title: Learnings
+    post_list:
+      limit: 15
+      category: learned
+      show_more: true
+      show_more_text: more
+      show_more_url: archive.html
+
+
+    
 
   - title: Contact
     entries:
