@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  jekyll:
+    image: rockstorm/jekyll:latest
+    container_name: jekyll-blog
+    volumes:
+      - /mnt/sudarnet/blog-site/:/srv/jekyll
+    command: sh -c "jekyll serve --watch --host 0.0.0.0 --livereload"
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.labels.sudarnet.allow.jekyll == true]
+      labels:
+        # Traefik configuration
+        - traefik.enable=true
+        - traefik.http.services.jekyll-https.loadbalancer.server.port=4000
+        - traefik.http.routers.jekyll-https.rule=Host(`blog.sudarnet.in`)
+        - traefik.http.routers.jekyll-https.entrypoints=https
+        - traefik.http.routers.jekyll-https.tls=true
+        - traefik.http.middlewares.https-redirect.redirectscheme.scheme=https
+        - traefik.http.middlewares.https-redirect.redirectscheme.permanent=true
+        - traefik.http.routers.jekyll-https.tls.certresolver=le
+    networks:
+      - traefik-public
+    restart: unless-stopped
+
+networks:
+  traefik-public:
+    external: true
